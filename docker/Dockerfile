@@ -13,6 +13,7 @@ RUN echo_supervisord_conf > supervisord.conf && \
 RUN mv supervisord.conf /etc/
 COPY tornado.ini /etc/supervisord.d/
 COPY run.sh /
+RUN chmod +x /run.sh
 
 EXPOSE 8081 
 
